@@ -8,7 +8,7 @@ Read and learn the following resources:
 
 ## Task 1: Generate a new phoenix project
 
-Generate a new project. We won't need a database this week, you can skip generation of all database related files with the `--no-ecto` flag.
+Generate a new project. We won't need a database for this guide, you can skip generation of all database related files with the `--no-ecto` flag.
 
 If you go to localhost:4000 in your browser, you should end up on the index page.
 
