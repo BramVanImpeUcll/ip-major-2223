@@ -6,6 +6,8 @@ Make sure that all required tools are [installed](https://hexdocs.pm/phoenix/ins
 
 LiveView is an alternative approach to rendering the UI of your Phoenix app.
 
+The material used in class can be found in the "class" folder.
+
 To know more about it check the following resources:
 
 * https://pragmaticstudio.com/phoenix-liveview
