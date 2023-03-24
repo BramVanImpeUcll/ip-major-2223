@@ -2,13 +2,13 @@
 
 ## Routes - nested resources
 
-Now that we have our (unfinished) context, schema and migration, we can go ahead and configure our routes. Because the user wants to configure his/her own cats, we'll need to generate some url that communicates this clearly in code and to the user. An example would be `/users/:user_id/cats` or `/users/:user_id/cats/:id/edit`. We can achieve this easily with [nested resources](https://hexdocs.pm/phoenix/routing.html) in our `router.ex`.
+Now that we have our (unfinished) context, schema and migration, we can go ahead and configure our routes. Because the user wants to configure his/her own cats, we'll need to generate some url that communicates this clearly in code and to the user. An example would be `/users/:user_id/cats` or `/users/:user_id/cats/:id/edit`. We can achieve this easily with [nested resources](https://hexdocs.pm/phoenix/1.6.16/routing.html) in our `router.ex`.
 
 Though we could easily generate a html version for the cat CRUD operations, we want these to only be editable through a REST endpoint.
 
 ## Router scopes
 
-To put it shortly, we can use [scoped routes](https://hexdocs.pm/phoenix/routing.html#scoped-routes) to group routes under a common path prefix with certain plugs. Several examples would be:
+To put it shortly, we can use [scoped routes](https://hexdocs.pm/phoenix/1.6.16/routing.html#scoped-routes) to group routes under a common path prefix with certain plugs. Several examples would be:
 
 * `/admin` scope that requires extra permissions
 * `/user` scope that needs authentication
@@ -36,12 +36,12 @@ We've already got a great example for the root path, let's create a new scope fo
 You can see that we created nested resources in the above code snippet. Though it seems that there's a lot of magic happening here, let us quickly go over this:
 
 * scope "/" -> resources "/users" => is for the html interface to edit our users.
-* scope "/api" -> resources "/users", only: [] => means that we're generating routes for our user as well. Thanks to the [resources macro](https://hexdocs.pm/phoenix/Phoenix.Router.html#resources/4), we can configure this. Using `only: []` we specify that we don't want REST routes for the users resource.
+* scope "/api" -> resources "/users", only: [] => means that we're generating routes for our user as well. Thanks to the [resources macro](https://hexdocs.pm/phoenix/1.6.16/Phoenix.Router.html#resources/4), we can configure this. Using `only: []` we specify that we don't want REST routes for the users resource.
 * resources "/cats", CatController => means that we're going to allow (nested if it is inside another resources block) cat routes for our REST API.
 
 ## Pipelines
 
-We've seen these [pipelines](https://hexdocs.pm/phoenix/routing.html#pipelines) several times now already, but what are these exactly?
+We've seen these [pipelines](https://hexdocs.pm/phoenix/1.6.16/routing.html#pipelines) several times now already, but what are these exactly?
 
 Our request arrives and the endpoint and needs to go through a lot of tranformations so that we can start using it. These transformations are done with plugs.
 
