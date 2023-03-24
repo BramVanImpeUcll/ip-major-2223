@@ -1,6 +1,6 @@
 # Phoenix LiveView
 
-Make sure that all required tools are [installed](https://hexdocs.pm/phoenix/installation.html).
+Make sure that all required tools are [installed](https://hexdocs.pm/phoenix/1.6.16/installation.html).
 
 Make sure you're using the correct Phoenix version. See [here](../../managing_your_phoenix_version.md) for more information.
 
