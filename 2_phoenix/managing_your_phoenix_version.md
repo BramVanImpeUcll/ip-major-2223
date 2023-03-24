@@ -10,7 +10,7 @@ mix archive.install hex phx_new <version>
 
 ## Version for this course
 
-All the material in this course is written for Phoenix `1.6.16`. We advise you to install this Phoenix version so that you can use the examples in this repository.
+All the material in this course is written for Phoenix `1.6.16`. We advise you to install this version of the Phoenix application generator so that you can use the examples in this repository.
 
 ```bash
 mix archive.install hex phx_new 1.6.16.
