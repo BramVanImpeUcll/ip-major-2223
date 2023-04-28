@@ -13,5 +13,7 @@ mix archive.install hex phx_new <version>
 All the material in this course is written for Phoenix `1.6.16`. We advise you to install this version of the Phoenix application generator so that you can use the examples in this repository.
 
 ```bash
-mix archive.install hex phx_new 1.6.16.
+mix archive.install hex phx_new 1.6.16
 ```
+
+After installing the generator for version `1.6.16`, generate a new project with the installed generator. This project will have Phoenix with version `1.6.16` included.
